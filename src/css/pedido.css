@@ -1,0 +1,268 @@
+/* === ESTILO GERAL === */
+body {
+  background: radial-gradient(circle at center, #8f0aa0 0%, #59226f 100%);
+  background: repeating-conic-gradient(from 0deg, #8f0aa0 0deg 15deg, #59226f 15deg 30deg);
+  background-blend-mode: multiply;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+  position: relative;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+/* === BOTÃO VOLTAR === */
+.botao-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  z-index: 1050;
+  background-color: #8F0A9F;
+  color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.botao-voltar:hover {
+  background-color: #59226F;
+  color: #000;
+}
+
+/* === CARDS DE PRODUTOS === */
+.card,
+.card-produto {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #3c1361;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 18rem;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card .badge {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* === BOTÃO === */
+.btn-warning {
+  background-color: #a336bc;
+  border-color: #8f0aa0;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #8f0aa0;
+  border-color: #6b0979;
+}
+
+/* === MODAL === */
+#pedidoModal .modal-content {
+  background-color: #ffffff;
+  color: #212529;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-tabs .nav-link {
+  color: #59226f;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #8f0aa0;
+  color: white;
+  border-color: #8f0aa0;
+}
+
+.tab-pane {
+  background: #f9f9f9;
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.modal-body label {
+  font-weight: 600;
+}
+
+.modal-body input,
+.modal-body select {
+  margin-bottom: 15px;
+}
+
+/* === ADICIONAIS === */
+.adicionais-gratis,
+.adicionais-pagos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.adicionais-gratis label,
+.adicionais-pagos label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.adicionais-gratis input[type="checkbox"],
+.adicionais-pagos input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #888;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adicionais-gratis input[type="checkbox"]:checked,
+.adicionais-pagos input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.adicionais-gratis input[type="checkbox"]:checked::after,
+.adicionais-pagos input[type="checkbox"]:checked::after {
+  content: '\2714';
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  left: 12px;
+  top: 9px;
+}
+
+.adicionais-gratis label:hover,
+.adicionais-pagos label:hover {
+  background-color: #e9e9e9;
+  border-color: #888;
+}
+
+.adicionais-gratis input:disabled + span,
+.adicionais-gratis input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .container-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 300px;
+  }
+
+  .botao {
+    width: 80%;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .lado-esquerdo,
+  .lado-direito {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 2rem;
+    margin-top: 70px;
+  }
+
+  .mensagem {
+    font-size: 1rem;
+  }
+
+  .endereco {
+    font-size: 0.9rem;
+  }
+
+  .botao-voltar {
+    top: 15px;
+    left: 15px;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .card,
+  .card-produto {
+    width: 90% !important;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+
+/* === LISTA DE ADICIONAIS === */
+.adicionais-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.adicionais-lista li {
+  background: #8f0aa0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.adicionais-lista li.selecionado {
+  background: #59226f;
+}
+
+/* === ESPAÇAMENTO ENTRE SEÇÕES === */
+.section-spacing {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}

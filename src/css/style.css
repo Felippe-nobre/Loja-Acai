@@ -1,0 +1,149 @@
+body.inicio {
+    background: radial-gradient(circle at center, #8f0aa0 0%, #59226f 100%);
+    background: repeating-conic-gradient(
+        from 0deg,
+        #8f0aa0 0deg 15deg,
+        #59226f 15deg 30deg
+    );
+    background-blend-mode: multiply;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+}
+
+
+.titulo-principal {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-principal {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.lado-esquerdo, .lado-direito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+}
+
+.lado-esquerdo {
+    text-align: center;
+}
+
+.logo {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.endereco {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.botao {
+    background-color: #2A002C;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #C954B2;
+}
+
+.botao.whats {
+    background-color: #25D366;
+}
+
+.botao.whats:hover {
+    background-color: #1ebe57;
+}
+#status-loja {
+    position: static; /* NÃO mais absolute! */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    margin-top: 10px; /* adiciona espaçamento depois do título */
+  }
+  
+
+
+#status-loja.aberto {
+  background-color: #28a745; /* Verde */
+}
+
+#status-loja.fechado {
+  background-color: #dc3545; /* Vermelho */
+}
+
+#modalHorario{
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+    .container-principal {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+      width: 300px;
+    }
+  
+    .botao {
+      width: 80%;
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+  
+    .lado-esquerdo, .lado-direito {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulo-principal {
+      font-size: 2rem;
+    }
+  
+    .mensagem {
+      font-size: 1rem;
+    }
+  
+    .endereco {
+      font-size: 0.9rem;
+    }
+  }
+  
