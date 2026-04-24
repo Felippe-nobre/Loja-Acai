@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const agora = new Date();
     const hora = agora.getHours();
 
-    const abre = 13;
+    const abre = 9; // Hora de abertura (9h)
     const fecha = 23;
     const diaSemana = agora.getDay();
 
