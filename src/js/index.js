@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const diaSemana = agora.getDay();
 
 
-    if (diaSemana !== 0 && diaSemana !== 6 &&  hora < fecha &&  hora >= abre){ // Verifica se é um dia útil e se está dentro do horário de funcionamento que é de segunda a domingo das 9h às 23h
+    if (diaSemana >= 0 && diaSemana <= 6 &&  hora < fecha &&  hora >= abre){ // Verifica se está dentro do horário de funcionamento que é de segunda a domingo das 9h às 23h
       statusLoja.textContent = 'Aberto';
       statusLoja.classList.remove('btn-danger');
       statusLoja.classList.add('btn-success');
